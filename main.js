@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //mobile menu
+    // Mobile menu button.
     $(".menu-btn").click(function() {
         $(".menu-wrap").slideToggle(300);
         $(this).toggleClass("on");
@@ -80,19 +80,19 @@ $(document).ready(function() {
         btnMore();
     }
 
-    //image to bg
+    // Image to background.
     $('.blog-slider .blog-img').each(function() {
         $(this).css('background-image', 'url(' + $(this).find('> img').attr('src') + ')').find('> img').hide();
     });
 
-    //flipper mobile
+    // Flipper mobile.
     $(".services-list li").click(function() {
         $(".services-list li").removeClass("active");
         $(this).addClass("active");
         return false;
     });
 
-    //show form
+    // Show form on vacancy page.
     $(".vacancy-page .show-form a").click(function() {
         $(".form-wrap").slideDown(500);
         $('.form-wrap').addClass("form-open");
@@ -103,7 +103,7 @@ $(document).ready(function() {
         return false;
     });
 
-    //accordion
+    // Accordion.
     jQuery(function() {
         initAccordion();
     });
@@ -196,10 +196,11 @@ $(document).ready(function() {
         };
     }(jQuery));
 
-    //parallax
+    // Parallax.
     $('.parallaxie').parallaxie({
         speed: 1
     });
+
     if (navigator.userAgent.match(/Trident\/7\./)) { // if IE
         $('body').on("mousewheel", function() {
             event.preventDefault();
@@ -209,7 +210,7 @@ $(document).ready(function() {
         });
     }
 
-    //circles main
+    // Circles main.
     $('.circle').circleProgress({
         animation: {
             duration: 3000,
@@ -241,7 +242,7 @@ $(document).ready(function() {
         $(this).find('p').html(Math.round(17 * progress) + '<i>Years of <br> experience</i>');
     });
 
-    //progress 1
+    // Progress 1.
     $('.progress-l .circle.c1').circleProgress({
         value: 1
     }).on('circle-animation-progress', function(event, progress) {
@@ -266,7 +267,7 @@ $(document).ready(function() {
         $(this).find('p').html(Math.round(4 * progress) + '<i>average period of work <br> in the company</i>');
     });
 
-    //progress 2
+    // Progress 2.
     $('.progress-2 .circle.c1').circleProgress({
         value: 1
     }).on('circle-animation-progress', function(event, progress) {
@@ -291,10 +292,10 @@ $(document).ready(function() {
         $(this).find('p').html(Math.round(18 * progress) + '<i>Years of <br> experience</i>');
     });
 
-    // black-white effect
+    // black-white effect.
     $('.grayscale').gray();
 
-    //awards slider
+    // Awards slider.
     $('.awards-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -323,7 +324,7 @@ $(document).ready(function() {
     });
 
 
-    //awards slider
+    // Stories slider.
     $('.stories-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -364,7 +365,7 @@ $(document).ready(function() {
         ]
     });
 
-    //reviews slider
+    // Reviews slider.
     $('.reviews-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -400,7 +401,7 @@ $(document).ready(function() {
             }
         ]
     });
-    //blog slider
+    // Blog slider.
     $('.blog-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -425,7 +426,7 @@ $(document).ready(function() {
         ]
     });
 
-    //services-slider-mobile
+    // Services slider.
     $('.services-slider-mobile').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -446,7 +447,7 @@ $(document).ready(function() {
         asNavFor: '.services-slider-mobile'
     });
 
-    //Flexible Business Models slider
+    // Flexible Business Models slider.
     $('.business-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -463,7 +464,7 @@ $(document).ready(function() {
         }]
     });
 
-    //awards slider
+    // Flip slider.
     $('.flip-slider').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -491,7 +492,7 @@ $(document).ready(function() {
         ]
     });
 
-    //tabs
+    // Tabs.
     $('body').find('.tab').hide();
     var activeItem = $($('.tab-nav .active > a').attr('href'));
     activeItem.show();
@@ -504,7 +505,7 @@ $(document).ready(function() {
         return false;
     });
 
-    //add file
+    // Add file.
     var inputs = document.querySelectorAll('.inputfile');
     Array.prototype.forEach.call(inputs, function(input) {
         var label = input.nextElementSibling,
@@ -524,7 +525,7 @@ $(document).ready(function() {
         });
     });
 
-    // add animation for all bloks
+    // Add animation for all bloks.
     $('.effect').addClass("hidden").viewportChecker({
         classToAdd: 'visible animated fadeInUp',
         offset: 100
